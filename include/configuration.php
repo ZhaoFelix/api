@@ -4,7 +4,7 @@
 $DATABASE_URL = "localhost";
 $DATABASE_REPLICAS_URL = "localhost";
 $DATABASE_USERNAME = "root";
-$DATABASE_PASSWORD = "root";
+$DATABASE_PASSWORD = "root147258";
 
 //CoreUser Database
 $COREUSER_DATABASE_URL = $DATABASE_URL;
@@ -32,7 +32,7 @@ $S3_BUCKET = "magikidroboticlabtest";
 $S3_URL = "https://$S3_BUCKET.s3.cn-north-1.amazonaws.com.cn/";
 
 //Connect DBName
-$DB_NAME = "HotPot";
+$DB_NAME = "tempDB";
 
 //region
 $REGION = "China";
