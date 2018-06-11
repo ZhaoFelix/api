@@ -2,7 +2,7 @@
 include_once 'public/qiniu.php';
 include_once 'include/template.php';
 header('Content-type: text/json; charset=UTF-8' );
-die(); 
+
 $response = array();
 // 文件类型限制  "file"名字必须和iOS客户端上传的name一致
 if ($_FILES["file"]["error"]-->0) {
