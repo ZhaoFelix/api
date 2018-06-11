@@ -1,6 +1,6 @@
 <?php
 include_once 'public/qiniu.php';
-include_once 'include/template.php';
+//include_once 'include/template.php';
 header('Content-type: text/json; charset=UTF-8' );
  
 $response = array();
