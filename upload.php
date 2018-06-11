@@ -1,5 +1,6 @@
 <?php
 include_once 'public/qiniu.php';
+include_once 'include/template.php';
 header('Content-type: text/json; charset=UTF-8' );
  
 $response = array();
@@ -27,9 +28,20 @@ if ($_FILES["file"]["error"]-->0) {
     if (file_exists($path)){
         $uploadMgr = new Qiniu\Storage\UploadManager();
         $key = date("YmdHis").rand(1000,9999).".png";
+        $temp = $key;
         list($ret, $err) = $uploadMgr->putFile($upToken, $key, $path);
         if($err!==null){
-            $response ['success']= $err;
+            //图片上传到七牛云成功，保存到自己的数据库
+            $picURL = "http://img.bedeveloper.cn/".$temp;
+            $sql = "insert into ArPictures ('picURL') values(".$picURL.")";
+            $id = query($sql);
+            if(isset($id)){
+                $response ['success']= "数据添加成功";
+            }
+            else {
+                 $response ['success']= "数据添加失败";
+            }
+            
         //json格式返回
         echo json_encode($response);
         }
