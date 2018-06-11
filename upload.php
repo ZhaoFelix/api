@@ -1,5 +1,5 @@
 <?php
-include_once '../public/qiniu.php';
+include_once 'public/qiniu.php';
 header('Content-type: text/json; charset=UTF-8' );
  
 $response = array();
