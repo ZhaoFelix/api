@@ -31,19 +31,19 @@ if ($_FILES["file"]["error"]-->0) {
         $temp = $key;
         list($ret, $err) = $uploadMgr->putFile($upToken, $key, $path);
         if($err!==null){
-            //图片上传到七牛云成功，保存到自己的数据库
-            $picURL = "http://img.bedeveloper.cn/".$temp;
-            $sql = "insert into ArPictures ('picURL') values(".$picURL.")";
-            $id = query($sql);
-            if(isset($id)){
-                $response ['success']= "数据添加成功";
-            }
-            else {
-                 $response ['success']= "数据添加失败";
-            }
-            
-        //json格式返回
-        echo json_encode($response);
+//            //图片上传到七牛云成功，保存到自己的数据库
+//            $picURL = "http://img.bedeveloper.cn/".$temp;
+//            $sql = "insert into ArPictures ('picURL') values(".$picURL.")";
+//            $id = query($sql);
+//            if(isset($id)){
+//                $response ['success']= "数据添加成功";
+//            }
+//            else {
+//                 $response ['success']= "数据添加失败";
+//            }
+//            
+//        //json格式返回
+//        echo json_encode($response);
         }
         else {
             $response ['success']= $ret;
