@@ -1,7 +1,7 @@
 <?php
 //七牛配置文件
 $prepath = dirname(__FILE__)."/";
-include "../include/extension/qiniu/autoload.php";
+include "include/extension/qiniu/autoload.php";
 
 use Qiniu\Auth; 
 use Qiniu\Storage\UploadManager;
