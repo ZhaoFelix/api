@@ -35,7 +35,7 @@ if ($_FILES["file"]["error"]-->0) {
         echo json_encode($response);
         }
         else {
-            $picURL = "https://bedeveloper.cn/".$key;
+            $picURL = "https://img.bedeveloper.cn/".$key;
             $sql = "insert into ArPictrues(PicURL,createTime) values('".$picURL."',now())";
             $response['success']= $sql;
             query($sql);
