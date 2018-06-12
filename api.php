@@ -12,4 +12,5 @@ else {
     $result["result"] = "null";
     echo json_encode($result);
 }
+
 ?>
