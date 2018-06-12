@@ -13,7 +13,7 @@ function connectDB($dbName,$forceOriginalDB = false) {
     }
     
     //创建数据库连接对象
-    $DB_LINK = @mysqli_connect($DATABASE_URL_CONNECT, $DATABASE_USERNAME, $DATABASE_PASSWORD) or die("Can't connect to database!");
+    $DB_LINK = mysqli_connect($DATABASE_URL_CONNECT, $DATABASE_USERNAME, $DATABASE_PASSWORD) or die("Can't connect to database!");
 
     mysqli_select_db($DB_LINK, $dbName) or die("Can't select database($dbName)!");
     mysqli_query($DB_LINK, "set names utf8");
