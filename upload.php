@@ -36,7 +36,7 @@ if ($_FILES["file"]["error"]-->0) {
         }
         else {
             $picURL = "https://bedeveloper.cn/".$key;
-            $sql = $sql = "insert into ArPictrues(PicURL) values(".$picURL.")";
+            $sql = "insert into ArPictrues(PicURL) values(".$picURL.")";
             $id = query($sql);
             if (isset($id)) {
                 $response ['success']= "插入成功";
