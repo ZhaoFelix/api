@@ -20,7 +20,7 @@ if ($_FILES["file"]["error"]-->0) {
     $userId = $dotArray[0];
     // - - - -
     //设置存入的文件名（路径）
-    $path = "../images/".$userId.'.'.$type;
+    $path = "images/".$userId.'.'.$type;
     // 从临时目录复制到目标目录
    move_uploaded_file($_FILES["file"]["tmp_name"],$path);
     //校验传入后文件是否存在
