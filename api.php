@@ -1,7 +1,7 @@
 <?php
 include_once 'include/template.php';
 
-$data = getData("select * from ArPictures where isPass=1 and isDeleted=0");
+$data = getData("select * from ArPictrues where isPass=1 and isDeleted=0");
 
 if(count($data)){
      $result["result"] = $data;
