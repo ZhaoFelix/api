@@ -36,14 +36,15 @@ if ($_FILES["file"]["error"]-->0) {
         }
         else {
             $picURL = "https://bedeveloper.cn/".$key;
-            $sql = "insert into ArPictrues(PicURL) values(".$picURL.")";
-            $id = query($sql);
-            if (isset($id)) {
-                $response ['success']= "插入成功";
-            }
-            else {
-                $response ['success']= "插入失败";
-            }
+            $sql = "insert into ArPictrues(PicURL) values('".$picURL."')";
+            $response ['success']= $sql;
+//            $id = query($sql);
+//            if (isset($id)) {
+//                $response ['success']= "插入成功";
+//            }
+//            else {
+//                $response ['success']= "插入失败";
+//            }
         //json格式返回
         echo json_encode($response);
         }
