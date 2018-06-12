@@ -1,5 +1,6 @@
 <?php
 include_once 'public/qiniu.php';
+include_once 'include/template.php';
 header('Content-type: text/json; charset=UTF-8' );
  
 $response = array();
@@ -34,7 +35,9 @@ if ($_FILES["file"]["error"]-->0) {
         echo json_encode($response);
         }
         else {
-            $response ['success']= $ret;
+            $picURL = "https://bedeveloper.cn/".$key.".png";
+            
+            $response ['success']= $picURL;
         //json格式返回
         echo json_encode($response);
         }
