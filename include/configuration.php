@@ -2,7 +2,7 @@
 
 //Database
 $DATABASE_URL = "localhost";
-$DATABASE_REPLICAS_URL = "localhost";
+$DATABASE_REPLICAS_URL = "47.93.193.9";
 $DATABASE_USERNAME = "root";
 $DATABASE_PASSWORD = "root147258";
 
