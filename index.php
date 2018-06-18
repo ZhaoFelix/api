@@ -20,15 +20,16 @@ if (count($data)==0){
         .item {
             position: relative;
             width: 22%;
-            height: 260px;
+            height: 300px;
             margin-left: 2%;
             float: left;
             border: 1px solid lightgray;
+            margin-bottom: 10px;
             
         }
         .item img {
             width: 100%;
-            height: 230px;
+            height: 300px;
         }
         .btns {
             
