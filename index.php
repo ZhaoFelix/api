@@ -19,8 +19,8 @@ if (count($data)==0){
         }
         .item {
             position: relative;
-            width: 22%;
-            height: 300px;
+            width: 17%;
+            height: 330px;
             margin-left: 2%;
             float: left;
             border: 1px solid lightgray;
