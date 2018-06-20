@@ -1,6 +1,6 @@
 <?php
 include_once 'include/template.php';
-$data = getData("select * from tempDB.ArPictrues where isPass=1 and isDeleted=0 order by CreateTime desc limit 0,50");
+$data = getData("select * from tempDB.ArPictrues where isPass=1 and isDeleted=0 order by CreateTime desc");
 
 if(count($data)>0){
      $result["result"] = $data;
