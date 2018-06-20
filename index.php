@@ -1,7 +1,7 @@
 <?php
 include_once 'include/template.php';
 
-$data = getData("select * from tempDB.ArPictrues where isPass=0 and isDeleted=0 order by CreateTime");
+$data = getData("select * from tempDB.ArPictrues where isPass=0 and isDeleted=0 order by CreateTime desc limit 0,50");
 if (count($data)==0){
     exit("没有数据");
 }
