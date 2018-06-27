@@ -13,7 +13,7 @@ if(!isset($name) || !isset($pwd)){
             
 }
 else {
-    $id = getRowData("select UserId from tempDB.UserList where UserName='".$name."' and Password='".$pwd."' and IsDeleed=0");
+    $id = getRowData("select UserId from tempDB.UserList where UserName='".$name."' and Password='".$pwd."' and IsDeleted=0");
     if (isset($id)){
       $arr = [
         "code" => "1",
