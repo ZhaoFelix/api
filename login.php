@@ -9,7 +9,7 @@ if(!isset($name) || !isset($pwd)){
         "code" => "0",
         "result" => "用户名或密码不存在"
     ];
-    echo urldecode(json_encode($arr));
+    echo json_encode($arr,JSON_UNESCAPED_UNICODE);
             
 }
 else {
@@ -20,15 +20,15 @@ else {
         "result" => "登录成功"
     ];
         
-      echo urldecode(json_encode($arr));
+     echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
     else {
          $arr = [
         "code" => "1",
         "result" => "用户名或密码不正确"
     ];
-    echo urldecode(json_encode($arr));
-    }
+   echo json_encode($arr,JSON_UNESCAPED_UNICODE);
+   }
 }
 
 ?>
