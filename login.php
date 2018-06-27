@@ -9,7 +9,7 @@ if(!isset($name) || !isset($pwd)){
         "code" => "0",
         "result" => "用户名或密码不存在"
     ];
-    echo json_endoce($arr);
+    echo json_encode($arr);
             
 }
 else {
