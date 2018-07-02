@@ -17,7 +17,7 @@ else {
         $arr = [
         "code" => "1",
         "result" => "成功",
-         "userId" => $data
+         "data" => $data
     ];
      echo json_encode($arr,JSON_UNESCAPED_UNICODE); 
      
