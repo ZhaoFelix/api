@@ -14,7 +14,7 @@ if(!isset($id) || !isset($value)){
 
 else {
     
-     $result = query("insert into tempDB.UserChickList values('".$value."',now(),'".$id."')");
+     $result = query("insert into tempDB.UserChickList(ListContent,CreateTime,UserId) values('".$value."',now(),'".$id."')");
         if(isset($result)){
             $arr = [
                  "code" => "2",
