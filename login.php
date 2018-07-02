@@ -9,9 +9,9 @@ if(!isset($name) || !isset($pwd)){
         "code" => "0",
         "result" => "用户名或密码不存在"
     ];
-    echo json_encode($arr,JSON_UNESCAPED_UNICODE);
-            
+    echo json_encode($arr,JSON_UNESCAPED_UNICODE);           
 }
+
 else {
     $id = getRowData("select UserId from tempDB.UserList where UserName='".$name."' and Password='".$pwd."' and IsDeleted=0");
     if (isset($id)){
@@ -25,7 +25,7 @@ else {
     }
     else {
          $arr = [
-        "code" => "1",
+        "code" => "2",
         "result" => "用户名或密码不正确"
     ];
    echo json_encode($arr,JSON_UNESCAPED_UNICODE);
