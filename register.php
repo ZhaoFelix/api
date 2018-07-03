@@ -24,10 +24,11 @@ else {
     else {
         $result = query("insert into tempDB.UserList(UserName,Password,CreateTime) values('".$name."','".$pwd."',now())");
         if(isset($result)){
+            $id = getSingleData("select UserId from tempDB.UserList where UserName='".$name."' and Password='".$pwd."' and IsDeleted=0");
             $arr = [
                  "code" => "2",
                 "result" => "添加成功",
-                "data" => $result
+                "data" => $id["UserId"]
             ];
         }
         else {
