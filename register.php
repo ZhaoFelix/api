@@ -22,11 +22,12 @@ else {
      echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
     else {
-        $result = query("insert into tempDB.UserList values('".$name."','".$pwd."',now())");
+        $result = query("insert into tempDB.UserList(UserName,Password,CreateTime) values('".$name."','".$pwd."',now())");
         if(isset($result)){
             $arr = [
                  "code" => "2",
-                "result" => "添加成功"
+                "result" => "添加成功",
+                "data" => $result
             ];
         }
         else {
