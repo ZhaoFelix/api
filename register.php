@@ -28,7 +28,7 @@ else {
             $arr = [
                  "code" => "2",
                 "result" => "添加成功",
-                "data" => $id["UserId"]
+                "data" => $id
             ];
         }
         else {
