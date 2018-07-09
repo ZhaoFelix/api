@@ -8,7 +8,7 @@ if(count($data)>0){
         "code"=>"1",
         "result"=>$data
     ];
-    echo json_decode($re,JSON_UNESCAPED_UNICODE);//设置编码格式，确保中文不会乱码
+    echo json_encode($re,JSON_UNESCAPED_UNICODE);//设置编码格式，确保中文不会乱码
 }
 else {
     $re = [
