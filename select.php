@@ -1,7 +1,7 @@
 <?php
 include_once 'include/template.php';
 
-$id = get("id");  //用户名
+$id = post("id");  //用户名
 
 if (!isset($id))
 {
