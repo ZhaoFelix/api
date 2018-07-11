@@ -1,8 +1,14 @@
 <?php
 include_once 'include/template.php';
 
-$id = post("id");  //用户名
-
+//GET请求方式
+if($_SERVER["REQUEST_METHOD"]=="GET"){
+    $id = get("id");  
+}
+//POST请求方式
+else if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $id = post("id");  //用户名
+}
 if (!isset($id))
 {
      $arr = [
